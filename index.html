@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><!-- TODO -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" type="text/css">
+    <!--<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.rtl.css" type="text/css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css" type="text/css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.rtl.css" type="text/css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-reboot.css" type="text/css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-reboot.rtl.css" type="text/css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-utilities.css" type="text/css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-utilities.rtl.css" type="text/css">
+    <link rel="script" href="node_modules/bootstrap/dist/js/bootstrap.bundle.js" type="text/js">
+    <link rel="script" href="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/js">
+    <link rel="script" href="node_modules/bootstrap/dist/js/bootstrap.esm.js" type="text/js">-->
+    <script type="text/javascript" src="javascript.js"></script>
+    <title>La Repubblica</title>
+</head>
+<body>
+    <!--menu top di default-->
+    <div class="menu_container text-center d_flex justify-content-center" id="menu_container_default">
+    <div class="row menu_top mx-auto" id="menu_top_default">
+        <div class="col-xs-4 col-sm-4 col-md-4 d-flex flex_column temporary_div align-items-center p-0 m-0">
+            <button class="align-items-center  p-0 m-0" id="open_nav">
+                <img src="img/menu_icon.png" class="buttonElement icon"><span class="hide_on_mobile buttonElement">MENU</span>
+            </button>
+            <span class="hide_on_mobile buttonElement align-items-center p-2">|</span>
+            <button class="align-items-center  p-0 m-0 hide_on_mobile">
+                <img src="img/search_icon.png" id="search_button" class="buttonElement icon"><span class="buttonElement">CERCA</span>
+            </button>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 d-flex flex_column temporary_div align-items-center justify-content-center  p-0 m-0">
+            <a class="buttonElement d-flex align-items-center" href="https://www.repubblica.it/" title="la Repubblica">
+                <button class="align-items-center p-0 m-0">ABBONATI</button>
+            </a>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 d-flex flex_column temporary_div justify-content-end align-items-center  p-0 m-0">
+            <button class="align-items-center  p-0 m-0">
+                <span class="hide_on_mobile buttonElement">GEDI SMILE</span>
+            </button>
+            <span class="hide_on_mobile buttonElement align-items-center p-2">|</span>
+            <button class="align-items-center p-0 m-0" id="r_icon_default">
+                <img src="img/R.svg" class="buttonElement icon" id="r_icon">
+            </button>
+            <span class="hide_on_mobile buttonElement align-items-center p-2">|</span>
+            <button class="align-items-center  p-0 m-0">
+                <span class="hide_on_mobile buttonElement">ACCEDI</span><img src="img/profile_icon.png" class="buttonElement icon">
+            </button>
+        </div>
+        </div>
+    </div>
+    <!--<div class="menu_container">
+    <div class="row menu_top" id="menu_top_default">
+        <div class="col-xs-4 col-sm-4 col-md-4 d-flex flex_column temporary_div align-items-center">
+            <button class="align-items-center">
+                <img src="img/menu_icon.png" class="buttonElement icon"><span class="hide_on_mobile buttonElement">Menu</span>
+            </button>
+            <span class="hide_on_mobile buttonElement align-items-center pt-2">|</span>
+            <button class="align-items-center hide_on_mobile">
+                <img src="img/search_icon.png" id="search_button" class="buttonElement icon"><span class="buttonElement">Cerca</span>
+            </button>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 d-flex flex_column temporary_div align-items-center justify-content-center">
+            <a href="https://www.repubblica.it/" title="la Repubblica">
+                <button class="align-items-center"><span class="buttonElement">Abbonati</span></button>
+            </a>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 d-flex flex_column temporary_div justify-content-end align-items-center">
+            <button class="align-items-center">
+                <span class="hide_on_mobile buttonElement">GEDI SMILE</span>
+            </button>
+            <span class="hide_on_mobile buttonElement align-items-center pt-2">|</span>
+            <button class="align-items-center" id="r_icon_default">
+                <img src="img/R.svg" class="buttonElement icon" id="r_icon">
+            </button>
+            <span class="hide_on_mobile buttonElement align-items-center pt-2">|</span>
+            <button class="align-items-center">
+                <span class="hide_on_mobile buttonElement">Accedi</span><img src="img/profile_icon.png" class="buttonElement icon">
+            </button>
+        </div>
+    </div>-->
+    <!--menu top alternative (width<sm)-->
+    <div class="row menu_top hide_by_default" id="menu_top_alternative">
+        <div class="col-xs-12 col-sm-12">
+        <div class="container">
+            <div class="row d_flex flex-row justify-content-between">
+             <div class="col-6 col-xs-6 col-sm-6 align-items-center">
+                <a href="https://www.repubblica.it/" title="la Repubblica">
+                    <button class="align-items-center"><span class="buttonElement">Abbonati</span></button>
+                </a>
+            </div>
+            <div class="col-6 col-xs-6 col-sm-6 align-items-center text-right">
+                <button id="r_icon_button" class="justify-content-end">
+                <!--qui compare l'elemento con id r_icon con animazione js-->
+                </button>
+            </div>
+            </div>
+            <div class="row d_flex flex-row justify-content-between">
+                <div class="col-4 col-xs-4 col-sm-4 align-items-center">
+                    <button class="align-items-center">
+                        <img src="img/menu_icon.png" class="buttonElement icon">
+                    </button>
+                </div>
+                <div class="col-4 col-xs-4 col-sm-4 align-items-center justify-content-center">
+                    <div id="rep_button" class="text-center"><!--qui va l'elemento con id="repubblica", animazione js--></div>
+                </div>
+                <div class="col-4 col-xs-4 col-sm-4 align-items-center text-right">
+                    <button id="profile_icon_button" class="align-items-center justify-content-end">
+                        <img src="img/profile_icon.png" class="buttonElement icon">
+                    </button>
+                 </div>
+            </div>
+        </div>
+        </div>
+    </div>
+<!-- nav -->
+<!--<div class="container p-0 m-0" id="nav_container">
+    <div class="row p-0 m-0">-->
+        <div class="col-md-6 col-sm-12 col-xs-12 p-0 m-0">
+            <nav class="hide_by_default"  id="nav_bar">
+            <!--<div id="repNetworkNav" class="rep-left-nav">
+        <div class="rep-left-nav__wrapper">
+            <svg class="R-logo">
+            <use href="#R-logo"></use>
+            </svg>
+            <form class="rep-left-nav__search" action="//ricerca.repubblica.it/repubblica" method="post">
+            <input id="search-rep" type="search" required="" placeholder="Ricerca su Repubblica">
+            <button type="submit">
+                <svg>
+                <use href="#r-icon-search"></use>
+                </svg>
+            </button>
+            </form>
+            <button id="repHamCloseButton" class="rep-left-nav__close-button rep-toggle-menu">
+            <svg>
+                <use href="#r-icon-close"></use>
+            </svg>
+            </button>
+        </div>
+        <div class="rep-left-nav__meteo" data-src="//www.repstatic.it/cless/common/widget/meteo/2017-v1/include/meteo-light.html"><div id="widgetMeteoLight" class="widget-meteo-light">
+                <div class="widget-meteo-light__column">
+                        <a href="http://meteo.repubblica.it/" title="Vai al sito meteo.repubblica.it">
+                            <span class="widget-meteo-light__image"></span>
+                            <span class="widget-meteo-light__temperature"></span>
+                        </a>
+                    
+                        <form autocomplete="off">
+                                <div class="autocomplete">
+                                    <input type="text" name="meteoLightCity" onfocus="this.value = '';">
+                                    <a class="widget-meteo-light__search"><svg><path d="M5.792 9.792c2.208 0 4-1.792 4-4s-1.792-4-4-4-4 1.792-4 4 1.792 4 4 4zm5.333 0l4.417 4.417-1.333 1.333-4.417-4.417v-.708l-.25-.25c-1 .875-2.333 1.375-3.75 1.375C2.584 11.542 0 9.001 0 5.792A5.78 5.78 0 0 1 5.792 0c3.209 0 5.75 2.583 5.75 5.792 0 1.417-.5 2.75-1.375 3.75l.25.25h.708z"></path></svg></a>
+                                </div>
+                        </form>
+                </div>		 
+                <div class="widget-meteo-light__link"><a href="http://meteo.repubblica.it/" title="Vai al sito meteo.repubblica.it">Tutte le previsioni</a></div>
+                <div class="widget-meteo-light__message is-active">Scegli la località</div>
+        </div>
+        <script src="//www.repstatic.it/cless/common/widget/meteo/2017-v1/js/meteo-light.js" async=""></script>
+        </div>
+        <nav id="rep-nav-list" class="rep-left__content" role="navigation">
+            <span class="assistive">Menu di navigazione</span>
+            <ul class="rep-left-nav__list">
+            <li class="rep-left-nav__list__item">
+                <a href="https://www.repubblica.it/premium/?ref=RHHD-M">
+                <svg class="r-premium-logo">
+                    <use href="#r-premium"></use>
+                </svg>
+                <span>Contenuti per gli abbonati</span>
+                </a>
+            </li>
+            <li class="rep-left-nav__list__item">
+                <a href="https://smile.gedidigital.it/">Gedi Smile</a>
+            </li>-->
+            <ul class="p-0">
+            <li>
+                <a>Sezioni<span></span></a>
+                <div class="container">
+                    <div class="row d_flex">
+                    <div class="col-sm-6 col-xs-6 justify-content-center p-0">
+                        <ul  class="p-0">
+                        <li><a href="https://quotidiano.repubblica.it/edicola/biblioteca.jsp">Biblioteca</a></li>
+                        <li><a href="https://www.repubblica.it/commenti/">Commenti</a></li>
+                        <li><a href="https://www.repubblica.it/cronaca/">Cronaca</a></li>
+                        <li><a href="https://www.repubblica.it/cultura/">Cultura</a></li>
+                        <li><a href="https://design.repubblica.it/">Design</a></li>
+                        <li><a href="https://www.repubblica.it/economia/">Economia</a></li>
+                        <li><a href="https://www.repubblica.it/dossier/giochi-online/enigmistica">Enigmistica</a></li>
+                        <li><a href="https://www.repubblica.it/esteri/">Esteri</a></li>
+                        <li><a href="https://www.repubblica.it/dossier/giochi/">Giochi</a></li>
+                        <li><a href="https://www.repubblica.it/green-and-blue/">Green&amp;Blue</a></li>
+                        <li><a href="https://www.repubblica.it/il-gusto/">Il Gusto</a></li>
+                        <li><a href="https://www.repubblica.it/la-zampa/">La Zampa</a></li>
+                        <li><a href="https://www.repubblica.it/londra/">Londra</a></li>
+                        <li><a href="https://www.repubblica.it/moda-e-beauty">Moda e Beauty</a></li>
+                        <li><a href="https://www.repubblica.it/solidarieta/">Mondo Solidale</a></li>
+                        <li><a href="https://www.repubblica.it/motori/">Motori</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-xs-6 justify-content-center p-0">
+                    <ul class="p-0"> 
+                    <li><a href="https://www.repubblica.it/podcast/">Podcast</a></li>
+                    <li><a href="https://www.repubblica.it/politica/">Politica</a></li>
+                    <li><a href="https://video.repubblica.it/">RepTv</a></li>
+                    <li><a href="https://www.repubblica.it/rubriche/">Rubriche</a></li>
+                    <li><a href="https://www.repubblica.it/salute">Salute</a></li>
+                    <li><a href="https://www.repubblica.it/scienze/">Scienze</a></li>
+                    <li><a href="https://www.repubblica.it/scuola/">Scuola</a></li>
+                    <li><a href="https://scuola.repubblica.it/">Repubblica@Scuola</a></li>
+                    <li><a href="https://www.repubblica.it/robinson/">Robinson</a></li>
+                    <li><a href="https://www.repubblica.it/serietv">Serie Tv</a></li>
+                    <li><a href="https://www.repubblica.it/spettacoli/">Spettacoli</a></li>
+                    <li><a href="https://www.repubblica.it/sport/">Sport</a></li>
+                    <li><a href="https://www.repubblica.it/tecnologia/">Tecnologia</a></li>
+                    <li><a href="https://www.repubblica.it/vaticano/">Vaticano</a></li>
+                    <li><a href="https://www.repubblica.it/viaggi/">Viaggi</a></li>
+                    </ul>
+                    
+                    </div>
+                    </div>
+                </div>    
+            </li>
+            <li>
+                <a>Edizioni Locali<span></span></a>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-6 justify-content-center p-0">
+                            <ul  class="p-0">
+                                <li><a href="https://roma.repubblica.it/">Roma</a></li>
+                                <li><a href="https://milano.repubblica.it/">Milano</a></li>
+                                <li><a href="https://bari.repubblica.it/">Bari</a></li>
+                                <li><a href="https://bologna.repubblica.it/">Bologna</a></li>
+                                <li><a href="https://firenze.repubblica.it/">Firenze</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 justify-content-center p-0">
+                            <ul  class="p-0">
+                                <li><a href="https://genova.repubblica.it/">Genova</a></li>
+                                <li><a href="https://napoli.repubblica.it/">Napoli</a></li>
+                                <li><a href="https://palermo.repubblica.it/">Palermo</a></li>
+                                <li><a href="https://parma.repubblica.it/">Parma</a></li>
+                                <li><a href="https://torino.repubblica.it/">Torino</a></li>
+                            </ul>
+                        </div> 
+            </li>
+            <li>
+                <a>Speciali<span></span></a>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-6 justify-content-center p-0">
+                            <ul  class="p-0">
+                            <li><a href="https://www.repubblica.it/oncologia/">Oncologia</a></li>
+                            <li><a href="https://www.repubblica.it/dossier/salute/saluteseno/">Salute Seno</a></li>
+                            <li><a href="https://www.repubblica.it/dossier/sport/giochi-senza-barriere">Giochi senza barriere</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 justify-content-center p-0">
+                            <ul  class="p-0">
+                            <li><a href="https://www.repubblica.it/dossier/esteri/fondi-strutturali-europei-progetti-italia/ ">Europa, Italia</a></li>
+                            <li><a href="https://www.repubblica.it/dossier/cronaca/la-repubblica-dei-cavalli">Repubblica dei cavalli</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a>Inserti<span></span></a>
+                <div class="container">
+                    <div class="row d_flex">
+                    <div class="col-sm-6 col-xs-6 justify-content-center p-0">
+                        <ul  class="p-0">
+                        <li><a href="https://www.repubblica.it/economia/affari-e-finanza/">Affari&amp;Finanza</a></li>
+                        <li><a href="https://d.repubblica.it/">D</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-xs-6 justify-content-center p-0">
+                        <ul  class="p-0">
+                        <li><a href="https://www.repubblica.it/venerdi/">Il Venerdi</a></li>
+                        <li><a href="https://www.repubblica.it/robinson/">Robinson</a></li>
+                        </ul>
+                    </div>
+            </li>
+            <li>
+                <a>Servizi<span></span></a>
+                <div class="container">
+                    <div class="row d_flex">
+                    <div class="col-sm-6 col-xs-6 justify-content-center p-0">
+                        <ul  class="p-0">
+                            <li><a href="https://annunci.repubblica.it/italia/">Annunci</a></li>
+                            <li><a href="https://www.entietribunali.kataweb.it/">Aste</a></li>
+                            <li><a href="https://www.repubblica.it/giochi-e-scommesse/">Giochi e Scommesse</a></li>
+                            <li><a href="https://tvzap.kataweb.it/categoria/guida-tv/">Guida Tv</a></li>
+                            <li><a href="https://ilmiolibro.kataweb.it/">Ilmiolibro</a></li>
+                            <li><a href="https://www.repubblica.it/economia/miojob/?utm_source=hp.repubblica.it&amp;utm_medium=linktr&amp;utm_campaign=intragruppo&amp;ref=RHHD-M">Lavoro</a></li>
+                            <li><a href="https://meteo.repubblica.it/">Meteo</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-xs-6 justify-content-center p-0">
+                            <ul class="p-0">
+                            <li><a href="https://necrologie.repubblica.it/">Necrologie</a></li>
+                            <li><a href="https://oroscopo.d.repubblica.it/">Oroscopo</a></li>
+                            <li><a href="https://quotidiano.repubblica.it/edicola/edicola.jsp">Edicola</a></li>
+                            <li><a href="https://www.joy.it/">Joy.it</a></li>
+                            <li><a href="https://www.consigli.it/">Consigli.it</a></li>
+                            <li><a href="https://dizionari.repubblica.it/">Dizionari</a></li>
+                            <li><a href="https://la.repubblica.it/cucina/">Ricette</a></li>
+                            <li><a href="https://quotidiano.repubblica.it/edicola/profilo/newsletter.jsp?where=newsletterpremium">Newsletter</a></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </li>
+            </ul>
+                <div class="container p-0">
+                    <div class="row d_flex">
+                    <div class="col-sm-6 col-xs-6 justify-content-center p-0">
+                        <button><a href="https://www.repubblica.it/static/servizi/gerenza.html">Redazione</a></button>
+                    </div>
+                    <div class="col-sm-6 col-xs-6 justify-content-center p-0">
+                        <button><a href="https://www.repubblica.it/static/servizi/scrivi.html">Scriveteci</a></button>
+                    </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12 p-0 m-0"></div>
+    <!--</div>
+</div>-->
+
+    <!--main-->
+<div class="container_main">
+    <div class="container" id="container_interno">
+        <!--menu con le icone-->
+        <div id="div_esterno" class="justify-content-center">
+        <!--data e meteo-->
+        <div class="row">
+            <div class="d-flex col-sm-12 justify-content-center align-items-center" id="rep_default">
+            <span id="repubblica" class="p-2">Republic</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-xs-12 d-flex flex-row justify-content-end align-items-center p-0" id="temperature_and_date">
+                <div id="data" class="justify-content-end text-right"><!--qui compare la data e ora di oggi--></div>
+            </div>
+            <div class="col-sm-6 align-items-center p-0">
+                <div id="meteo" class="hide_on_mobile">
+                <!--<div id="meteo_img"><img src="img/sun.png" alt="sole" class="icon"></div>-->
+                <div id="meteo_temp"><span>9°</span></div>
+                <form>
+                    <input type="text" placeholder="Firenze...">
+                    <button type="submit" class="button_with_icon"><img src="img/search_icon.png" class="buttonElement icon"></button>
+                </form>
+                </div>
+            </div>   
+
+        </div>
+        </div>
+        <!--2 menu orizzontali-->
+        <div class="container" id="container_interno2">
+
+        <!-- menu 1 -->
+            <div class="row hide_on_mobile m-0 p-0" id="menu_1">
+                <div class="d-flex justify-content-center m-0 p-1">
+                    <ul class="align-items-center m-0 p-0">
+                        <li><a href="#" id="menu_espandibile" class="menu_title">Sezioni v</a>
+                            
+                        </li>
+                        <li>
+                            <a href="#" id="menu_espandibile_1" class="menu_title">Edizioni locali v</a> <!-- primo list-item, prima voce del menu -->
+                            <ul class="hide_by_default sottomenu" id="sottomenu1"> <!-- Lista annidata: voci del sotto-menu -->
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-1 col-sm-1 col-md-1">
+                                        </div>
+                                        <div class="col-xs-2 col-sm-2 col-md-2">
+                                            <li><a href="#">Ancona</a></li></div>
+                                        <div class="col-xs-2 col-sm-2 col-md-2">
+                                            <li><a href="#">Bari</a></li></div>
+                                        <div class="col-xs-2 col-sm-2 col-md-2">
+                                            <li><a href="#">Bologna</a></li></div>
+                                        <div class="col-xs-2 col-sm-2 col-md-2">
+                                            <li><a href="#">Firenze</a></li></div>
+                                        <div class="col-xs-2 col-sm-2 col-md-2">
+                                            <li><a href="#">Genova</a></li></div>
+                                        <div class="col-xs-1 col-sm-1 col-md-1">
+                                        </div>
+                                        <div class="col-xs-2 col-sm-2 col-md-2">
+                                            <li><a href="#">Milano</a></li></div>
+                                        <div class="col-xs-2 col-sm-2 col-md-2">
+                                            <li><a href="#">Napoli</a></li></div>
+                                    </div>
+                                </div>
+                            </ul> <!-- Fine del sotto-menu -->
+                        </li>
+                        <li>
+                            <a href="#" id="menu_espandibile_2"  class="menu_title">Il Quotidiano v</a> <!-- primo list-item, prima voce del menu -->
+                            <ul class="hide_by_default sottomenu m-0 p-1" id="sottomenu2"> <!-- Lista annidata: voci del sotto-menu -->
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-1 col-sm-1 col-md-1">
+                                        </div>
+                                        <div class="col-xs-2 col-sm-2 col-md-2">
+                                            <li><a href="#">Sfoglia il giornale pdf</a></li></div>
+                                        <div class="col-xs-2 col-sm-2 col-md-2">
+                                            <li><a href="#">Homepage premium</a></li></div>
+                                        <div class="col-xs-2 col-sm-2 col-md-2">
+                                            <li><a href="#">Giochi</a></li></div>
+                                    </div>
+                                </div>
+                            </ul> <!-- Fine del sotto-menu -->
+                        </li>
+                        <li>
+                            <a href="#" id="menu_espandibile_3"  class="menu_title">Servizi v</a> <!-- primo list-item, prima voce del menu -->
+                            <ul class="hide_by_default sottomenu m-0 p-1" id="sottomenu3"> <!-- Lista annidata: voci del sotto-menu -->
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-1 col-sm-1 col-md-1">
+                                        </div>
+                                        <div class="col-xs-2 col-sm-2 col-md-2">
+                                            <li><a href="#">Sfoglia il giornale pdf</a></li></div>
+                                        <div class="col-xs-2 col-sm-2 col-md-2">
+                                            <li><a href="#">Homepage premium</a></li></div>
+                                        <div class="col-xs-2 col-sm-2 col-md-2">
+                                            <li><a href="#">Giochi</a></li></div>
+                                    </div>
+                                </div>
+                            </ul> <!-- Fine del sotto-menu -->
+                        </li>
+                        <li>
+                            <a href="#" id="menu_espandibile_4"  class="menu_title">A-Z v</a> <!-- primo list-item, prima voce del menu -->
+                            <ul class="hide_by_default sottomenu m-0 p-1" id="sottomenu4"> <!-- Lista annidata: voci del sotto-menu -->
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-1 col-sm-1 col-md-1">
+                                        </div>
+                                        <div class="col-xs-2 col-sm-2 col-md-2">
+                                            <li><a href="#">Sfoglia il giornale pdf</a></li></div>
+                                        <div class="col-xs-2 col-sm-2 col-md-2">
+                                            <li><a href="#">Homepage premium</a></li></div>
+                                        <div class="col-xs-2 col-sm-2 col-md-2">
+                                            <li><a href="#">Giochi</a></li></div>
+                                    </div>
+                                </div>
+                            </ul> <!-- Fine del sotto-menu -->
+                        </li>
+                        
+                        </ul> <!-- Fine del sotto-menu -->
+                        <ul class="hide_by_default sottomenu" id="sottomenu0"> 
+                            <div class="container col-md-12">
+                                <div class="row">
+                                    <div class="col-xs-1 col-sm-1 col-md-1">
+                                    </div>
+                                    <div class="hide_by_default col-xs-2 col-sm-2 col-md-2">
+                                        <li><a href="#">Commenti</a></li></div>
+                                    <div class="col-xs-2 col-sm-2 col-md-2">
+                                        <li><a href="#">Cronaca</a></li></div>
+                                    <div class="col-xs-2 col-sm-2 col-md-2">
+                                        <li><a href="#">Cultura</a></li></div>
+                                    <div class="col-xs-2 col-sm-2 col-md-2">
+                                        <li><a href="#">Design</a></li></div>
+                                    <div class="col-xs-2 col-sm-2 col-md-2">
+                                        <li><a href="#">Economia</a></li></div>
+                                    <div class="col-xs-1 col-sm-1 col-md-1">
+                                    </div>
+                                    <div class="col-xs-2 col-sm-2 col-md-2">
+                                        <li><a href="#">Esteri</a></li></div>
+            
+                                </div>
+                            </div>
+                </div>
+                
+            </div>
+            
+        <!-- menu 2 -->   
+        <div id="lista_con_scorrimento" class="d-flex justify-content-center align-items-center p-0">
+            <ul class="align-items-center justify-content-center p-1 m-0">
+                <li><a href="#">Berlusconi</a></li>
+                <li><a href="#">Trump</a></li>
+                <li><a href="#">Depressione</a></li>
+                <li><a href="#">Ucraina</a></li>
+                <li><a href="#">Juve-Inter</a></li>
+                <li><a href="#">Esteri</a></li>
+                <li><a href="#">Superbonus</a></li>
+                <li><a href="#">Pasqua</a></li>
+                <li><a href="#">Pnrr</a></li>
+                <li><a href="#">Petizione per l'ambiente</a></li>
+            </ul>
+        </div>
+        <!--ad--><!--
+        <div class="row ad_top hide_on_mobile">
+            <img src="img/keyboard_ad.jpg">
+        </div>-->
+        <div class="row">
+            <div class="col-sm-9 col-xs-12 d-flex flex-column px-30 articoli">
+                <div id="colonna_interno_left">
+                        <div class="priority_div_1 article_content align-items-center col-sm-12 col-xs-12">
+                            <div class="container d_flex">
+                                <div class="row">
+                                    <div class="col-sm-12 col-xs-12 d_flex">
+                                    <div id="blink"><!--live red dot--></div>
+                                    <h1 id='milano'>Milano</h1>
+                                </div>
+                                </div>
+                                <div class="row">
+                                <div class="col-sm-6 col-xs-12">                        <!--bottone live-->
+                                <figure>
+                                <img src="img/politico.jpg" alt="La Camera">
+                                <figcaption>il deputato Mario Rossi</figcaption>
+                                </figure>
+                                </div>
+                                <div class="col-sm-6 col-xs-12 text-center">
+                                <!--bottone live-->
+                                <figure>
+                                    <img src="img/ambulanza.jpg" alt="La Camera">
+                                    <figcaption></figcaption>
+                                </figure>
+                                </div>
+                                </div>
+                                <div class="row">
+                                <div class="col-sm-12 col-xs-12 text-center">
+                                    <article>
+                                
+                                    <h1 class="">La politica</h1>
+                                    <h2 class="">
+                                    <a href="..." class="p1_a">Malore improvviso per il deputato Rossi durante un dibattito parlamentare. In attesa di aggiornamenti dall'ospedale </a>
+                                    </h2>
+                                <span class="author">di Alessio Neri</span>
+                            </article>
+                            </div>
+                        
+                        </div>
+                    </div>
+                
+                        <div class="priority_div_1 article_content col-sm-12 col-xs-12"> 
+                            <div class="col-sm-12 col-xs-12 text-center"><h1>I temi della politica</h1>
+                            <article>La politica
+                                <figure>
+                                    <img src="img/parliament.jpg" alt="La Camera">
+                                    <figcaption>La Camera dei deputati</figcaption>
+                                </figure>
+                                <h1 class="">Politica</h1>
+                                <h2 class="">La destra di governo
+                                    <a href="..." class="p1_a">annuncia una nuova proposta per la legge elettorale, che scatena un dibattito secolare</a>
+                                </h2>
+                                <span class="author">di Sara Bianchi</span>
+                            </article>
+                            </div>
+                        </div>
+                    <!--div affiancati-->
+                    <div class="priority_div_1 article_content col-sm-8 col-xs-12"> 
+                        <h1>Nuove tecnologie</h1>
+                        <article>
+                            <figure>
+                                <img src="img/ai.jpg" alt="il ministro Rossi">
+                                <figcaption></figcaption>
+                            </figure>
+                            <h1>Intelligenza artificiale</h1>
+                            <h2>
+                                <a href="..." class="p2_a">il gestore di Chatgpt, OpenAI, ha bloccato l'uso del servizio dall'Italia. 
+                                    Così mira a evitare la sanzione ma al tempo stesso cerca una soluzione per tornare rispettando le indicazioni del Garante</a></h2>
+                            <span class="author">di Sara Bianchi</span>
+                        </article>
+                    </div>
+                    <div class="priority_div_2 article_content col-sm-4 col-xs-12"> 
+                        <h1>Musica</h1> 
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6">
+                                    <figure>
+                                        <img src="img/singer.jpg" alt="">
+                                        <figcaption></figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                <article>
+                                    <h1></h1>
+                                    <h2>
+                                        <a href="..." class="p3_a">Il festival di San Remo...</a>
+                                    </h2>
+                                    <span class="author">di Sara Bianchi</span>
+                                </article>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--div affiancati-->
+                    <div class="col-sm-12 col-xs-12 text-center justify-content-center">
+                        <div class="container">
+                            <div class="row"><h1>Governo</h1></div>
+                        
+                        <div class="row">
+                        <div class="priority_div_1 article_content col-sm-6 col-xs-12"> 
+                        <article>
+                            <figure>
+                                <img src="img/governo1.jpg" alt="il ministro Rossi">
+                                <figcaption></figcaption>
+                            </figure>
+                            <h1 class="p_header"></h1>
+                            <h2 class="p_header">
+                                <a href="..." class="p2_a">Approvata la nuova legge di bilancio, ma non entrerà in vigore fino al..</a>
+                            </h2>
+                            <span class="author">di Emilio Verdi</span>
+                        </article>
+                        </div> 
+                    <div class="priority_div_1 article_content col-sm-6 col-xs-6"> 
+                        <h1 class="p_header"></h1>
+                        <article>
+                            <figure>
+                                <img src="img/governo2.jpg" alt="il ministro Rossi">
+                                <figcaption></figcaption>
+                            </figure>
+                            <h1></h1>
+                            <h2>
+                                <a href="..." class="p2_a">Tensione alla camera per la nomina dei nuovi membri del..</a>
+                            </h2>
+                            <span class="author">di Palo Gialli</span>
+                        </article>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            
+                    <!--prima scritta poi img-->
+                    <div class="priority_div_1 article_content col-sm-12 col-xs-12"> 
+                        <div class="row text-center"><h1>Musica</h1></div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <article>
+                                            <h1></h1>
+                                            <h2>
+                                                <a href="..." class="p1_a">Record di telespettatori per la prima serata del concerto a Verona.
+
+                                                    Ma lo spettacolo non è stato esente da imprevisti. Alcuni spettatori hanno avuto problemi ad entrare, causando code interminabili. Inoltre, il tempo incerto ha portato ad alcuni ritardi nell'apertura...</a>
+                                            </h2>
+                                            <span class="author">di Sara Bianchi</span>
+                                        </article>
+                                    </div> 
+                                    <div class="col-xs-12 col-sm-6">
+                                        <figure>
+                                            <img src="img/singer.jpg" alt="">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                    </div>
+                                    
+                                </div>
+                            </div>  
+                    
+                            </div></div>
+                    
+                            </div>
+                    <!--div affiancati-->       
+                    <div class="col-sm-12 col-xs-12 text-center article_content">
+                        <h1>Calcio</h1>
+                    <div class="container">
+                    <div class="row">
+                        <div class="priority_div_1 article_content col-sm-9 col-xs-12">
+                        <h1 class="p_header"></h1>
+                        <article>
+                            <figure>
+                                <img src="img/governo1.jpg" alt="il ministro Rossi">
+                                <figcaption></figcaption>
+                            </figure>
+                            <h1 class="p_header"></h1>
+                            <h2 class="p_header">
+                                <a href="..." class="p1_a">Approvata la nuova legge di bilancio, ma non entrerà in vigore fino al..</a>
+                            </h2>
+                            <span class="author">di Emilio Verdi</span>
+                        </article>
+                    </div>
+                    <div class="priority_div_1 article_content col-sm-3 col-xs-12"> <!-- i div di priority_1 saranno quelli più grandi-->
+                        <h1 class="p_header"></h1>
+                        <article>
+                            <figure>
+                                <img src="img/governo2.jpg" alt="il ministro Rossi">
+                                <figcaption></figcaption>
+                            </figure>
+                            <h1 class="p_header"></h1>
+                            <h2 class="p_header">
+                                <a href="..." class="p3_a">Tensione alla camera per la nomina dei nuovi membri del..</a>
+                            </h2>
+                            <span class="author">di Palo Gialli</span>
+                        </article>
+                        <h1 class="p_header"></h1>
+                        <article>
+                            <figure>
+                                <img src="img/governo2.jpg" alt="il ministro Rossi">
+                                <figcaption></figcaption>
+                            </figure>
+                            <h1 class="p_header"></h1>
+                            <h2 class="p_header">
+                                <a href="..." class="p3_a">Tensione alla camera per la nomina dei nuovi membri del..</a>
+                            </h2>
+                            <span class="author">di Palo Gialli</span>
+                        </article>
+                    </div>
+                    </div>
+                    </div>
+                    <!--3 div affiancati-->
+                    <div class="col-sm-12 col-xs-12 text-center"><h1>Notizie</h1></div>
+                    <div class="article_content col-sm-4 col-xs-12"> <!-- i div di priority_1 saranno quelli più grandi-->
+                        <h1 class="p_header"></h1>
+                        <article>
+                            <figure>
+                                <img src="img/governo1.jpg" alt="il ministro Rossi">
+                                <figcaption></figcaption>
+                            </figure>
+                            <h1 class="p_header"></h1>
+                            <h2 class="p_header">
+                                <a href="..." class="p3_a">Approvata la nuova legge di bilancio, ma non entrerà in vigore fino al..</a>
+                            </h2>
+                            <span class="author">di Emilio Verdi</span>
+                        </article>
+                    </div>
+                    <div class="article_content col-sm-4 col-xs-12">
+                        <h1 class="p_header"></h1>
+                        <article>
+                            <figure>
+                                <img src="img/parliament.jpg" alt="il ministro Rossi">
+                                <figcaption></figcaption>
+                            </figure>
+                            <h1 class="p_header"></h1>
+                            <h2 class="p_header">
+                                <a href="..." class="p3_a">Tensione alla camera per la nomina dei nuovi membri del..</a>
+                            </h2>
+                            <span class="author">di Paolo Gialli</span>
+                        </article>
+                        
+                    </div>
+                    <div class="article_content col-sm-4 col-xs-12"> 
+                        <h1 class="p_header"></h1>
+                        <article>
+                            <figure>
+                                <img src="img/governo2.jpg" alt="il ministro Rossi">
+                                <figcaption></figcaption>
+                            </figure>
+                            <h1 class="p_header"></h1>
+                            <h2 class="p_header">
+                                <a href="..." class="p3_a">Tensione alla camera per la nomina dei nuovi membri del..</a>
+                            </h2>
+                            <span class="author">di Paolo Gialli</span>
+                        </article>
+                        
+                    </div>
+        
+        
+
+
+                        </div>
+                </div>
+        
+            <!--video e pubblicità-->
+            <div class="col-sm-3 col-xs-12 d-flex flex-column px-30 pubblicità">
+                <!--pubblicità-->
+            <div class="row">
+                <div class="col-sm-12 col-xs-12 text-center" id="colonna_interno_right">
+                    <div id="ad_0" class="ad">
+                        <span class="ad_header">Pubblicità</span>
+                        <article>40% per i nuovi acquirenti..
+                            <figure>
+                                <img src="img/shopping.jpg" alt="">
+                                <figcaption></figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                <!--video-->
+                    <div id="video" class="ad">
+                    <h1 class="p_header">Video</h1>
+                    <article>
+                        <iframe width=100% height=auto src="https://www.youtube.com/embed/YoXJryFcwcM" title="YouTube video player" frameborder="0" allow="accelerometer; &autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                        <h2 class="p_header">Etna</h2>
+                        <a href="...">"Eruzione senza precedenti" dice il direttore dell'INGV, evacuata l'area intorno alla città</a>
+                    </article>
+                    </div>            
+                
+                <!--pubblicità-->
+                    
+                    <div id="ad_1" class="hide_by_default ad">
+                        <span class="ad_header">Pubblicità</span>
+                        <article>Prova il nuovo rossetto..
+                            <figure>
+                                <img src="img/lipstick_ad.jpg" alt="">
+                                <figcaption></figcaption>
+                            </figure>
+                        </article>
+                    </div>
+
+                    <div id="ad_1" class="hide_by_default ad">
+                        <h1 class="p_header"></h1>
+                        <article>Il dentifricio per denti perfetti..
+                            <figure>
+                                <img src="img/toothpaste_ad.jpg" alt="">
+                                <figcaption></figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                    <div id="ad_3" class="hide_by_default ad">
+                        <h1 class="p_header"></h1>
+                        <article>Vacanze 2023 per coppie..
+                            <figure>
+                                <img src="img/resort_ad.jpg" alt="">
+                                <figcaption></figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                    <div id="ad_4" class="hide_by_default ad">
+                        <h1 class="p_header"></h1>
+                        <article>Prova l'auto elettrica..
+                            <figure>
+                                <img src="img/car_ad.jpg" alt="">
+                                <figcaption></figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                    
+
+                    <div id="ad_5" class="hide_by_default ad">
+                        <h1 class="p_header"></h1>
+                        <article>Apre a Milano il negozio..
+                            <figure>
+                                <img src="img/kfc_ad.jpg" alt="">
+                                <figcaption></figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                    <div id="ad_6" class="hide_by_default ad">
+                        <h1 class="p_header"></h1>
+                        <article>Prova l'auto elettrica nel 2023..
+                            <figure>
+                                <img src="img/film_ad.jpg" alt="">
+                                <figcaption></figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                    <!--editoriali-->
+                    <section>
+                    <div id="editoriale">
+                        <div class="div_editoriale_main text-center"><h1>Editoriali & Commenti</h1></div>
+                    </section>
+                    <section>
+                        <div class="div_editoriale"><h2>L'analisi</h2></div>
+                        <span class="autore">di Giulio Bianchi & Rossella Neri</span>
+                        <div><a href="...">Critica alla nuova legge sulle armi</a></div>
+                    </section>
+                    <section>
+                        <div class="div_editoriale"><h2>America</h2></div>
+                        <span class="autore">di Giulio Bianchi & Rossella Neri</span>
+                        <div><a href="...">Commento sull'articolo 104 del nuovo codice penale</a></div>
+                    </section>
+                    <section>
+                        <div class="div_editoriale"><h2>Il caso</h2></div>
+                        <span class="autore">di Giulio Bianchi & Rossella Neri</span>
+                        <div><a href="...">Riflessione sul caso Tortora</a></div>
+                    </section>
+                    <section>
+                        <div class="div_editoriale"><h2>Ambiente</h2></div>
+                        <span class="autore">di Giulio Bianchi & Rossella Neri</span>
+                        <div><a href="...">Un mondo di ecologisti</a></div>
+                    </section>
+                    <section>
+                        <div class="div_editoriale"><h2>Progresso</h2></div>
+                        <span class="autore">di Giulio Bianchi & Rossella Neri</span>
+                        <div><a href="...">Un commento sulle unioni civili</a></div>
+                    </section>
+                    <!--blocco di ads-->
+                    <div id="ad_7" class="hide_by_default">
+                        <div class="ad">
+                            <h1 class="p_header"></h1>
+                            <article>Apre a Milano il negozio..
+                                <figure>
+                                    <img src="img/kfc_ad.jpg" alt="">
+                                    <figcaption></figcaption>
+                                </figure>
+                            </article>
+                        </div>
+                        <div class="ad">
+                            <h1 class="p_header"></h1>
+                            <article>Apre a Milano il negozio..
+                                <figure>
+                                    <img src="img/kfc_ad.jpg" alt="">
+                                    <figcaption></figcaption>
+                                </figure>
+                            </article>
+                        </div>
+                        <div class="ad">
+                            <h1 class="p_header"></h1>
+                            <article>Apre a Milano il negozio..
+                                <figure>
+                                    <img src="img/kfc_ad.jpg" alt="">
+                                    <figcaption></figcaption>
+                                </figure>
+                            </article>
+                        </div>
+                        <div class="ad">
+                            <h1 class="p_header"></h1>
+                            <article>Apre a Milano il negozio..
+                                <figure>
+                                    <img src="img/kfc_ad.jpg" alt="">
+                                    <figcaption></figcaption>
+                                </figure>
+                            </article>
+                        </div>
+                        <div class="ad">
+                            <h1 class="p_header"></h1>
+                            <article>Apre a Milano il negozio..
+                                <figure>
+                                    <img src="img/kfc_ad.jpg" alt="">
+                                    <figcaption></figcaption>
+                                </figure>
+                            </article>
+                        </div>
+                    </div>
+    
+    
+                </div>
+                </div>
+                </div>
+            </div>
+        <!--fine sezione articoli-->
+        <!--sezione orizzontale video-->
+        <div class="row">
+            <div class="d-flex col-sm-12 col-xs-12 justify-content-center">
+                <span>Video</span>
+            </div>
+            <div class="d-flex flex-column col-sm-3 col-xs-6 justify-content-center">
+                <span>Video</span>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Sa1pPVuN308" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="d-flex flex-column col-sm-3 col-xs-6 justify-content-center">
+                <span>Video</span>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/--B3Fgdp6Js" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="d-flex flex-column col-sm-3 col-xs-6 justify-content-center">
+                <span>Video</span>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kyy2d49wUv0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="d-flex flex-column col-sm-3 col-xs-6 justify-content-center">
+                <span>Video</span>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/caDda0z2dxw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>      
+        </div>
+    </div>
+</div>
+
+
+    <!--todo grid footer-->
+    <footer>
+    <div class="container pt-3" id="container_footer">
+        <!--<div>-->
+                <div class="row hide-on-mobile flex-row">
+                    <div class="d-flex col-sm-12 col-xs-12 justify-content-between">
+                        <div><span id="Il_Network">Il Network</span></div>
+                        <div class="d-flex  row justify-content-end"><button id="footer_toggle">Espandi v</button></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="footer_menu_main" class="hide_by_default">
+                    <div class="col-xs-12 col-ms-12">
+                    <section class="footer_menu">                       
+                        <ul>
+                            <li><h2 class="">Edizioni locali</h2></li>
+                            <li><a href="https://bari.repubblica.it/" title="Bari">Bari</a></li>
+                            <li><a href="https://bologna.repubblica.it/" title="Bologna">Bologna</a></li>
+                            <li><a href="https://firenze.repubblica.it/" title="Firenze">Firenze</a></li>
+                            <li><a href="https://genova.repubblica.it/" title="Genova">Genova</a></li>
+                            <li><a href="https://milano.repubblica.it/" title="Milano">Milano</a></li>
+                            <li><a href="https://napoli.repubblica.it/" title="Napoli">Napoli</a></li>
+                            <li><a href="https://palermo.repubblica.it/" title="Palermo">Palermo</a></li>
+                            <li><a href="https://parma.repubblica.it/" title="Parma">Parma</a></li>
+                            <li><a href="https://roma.repubblica.it/" title="Roma">Roma</a></li>
+                            <li><a href="https://torino.repubblica.it/" title="Torino">Torino</a></li>
+                        </ul>
+                    </section>
+                    <section class="footer_menu">                       
+                        <ul>
+                            <li><h2>Supplementi Repubblica</h2></li>
+                            <li><a href="https://www.repubblica.it/static/diario/index.html" title="Archivio Diario">Archivio Diario</a></li>
+                            <li><a href="https://www.repubblica.it/static/domenica/index.html" title="Archivio La Domenica">Archivio La Domenica</a></li>
+                            <li><a href="https://www.repubblica.it/supplementi/af/index.htm" title="Affari &amp; Finanza">Affari &amp; Finanza</a></li>
+                            <li><a href="https://d.repubblica.it/" title="D - la Repubblica">D - la Repubblica</a></li>
+                            <li><a href="https://www.repubblica.it/venerdi/" title="Il Venerdì">Il Venerdì</a></li>
+                        </ul>
+                    </section>
+                    <section class="footer_menu">
+                        <ul>
+                            <li><h2>Gedi News Network</h2></li>
+                            <li><a href="https://www.lastampa.it/" title="La Stampa">La Stampa</a></li>
+                            <li><a href="https://www.ilsecoloxix.it/" title="Il Secolo XIX">Il Secolo XIX</a></li>
+                            <li><a href="https://gazzettadimantova.gelocal.it/" title="Gazzetta di Mantova">Gazzetta di Mantova</a></li>
+                            <li><a href="https://corrierealpi.gelocal.it/" title="Corriere delle Alpi">Corriere delle Alpi</a></li>
+                            <li><a href="https://mattinopadova.gelocal.it/" title="Il mattino di Padova">Il mattino di Padova</a></li>
+                            <li><a href="https://ilpiccolo.gelocal.it/" title="Il Piccolo">Il Piccolo</a></li>
+                            <li><a href="https://nuovavenezia.gelocal.it/" title="La Nuova Venezia">La Nuova Venezia</a></li>
+                            <li><a href="https://laprovinciapavese.gelocal.it/" title="La Provincia Pavese">La Provincia Pavese</a></li>
+                            <li><a href="https://lasentinella.gelocal.it/" title="La Sentinella del Canavese">La Sentinella del Canavese</a></li>
+                            <li><a href="https://tribunatreviso.gelocal.it/" title="La Tribuna di Treviso">La Tribuna di Treviso</a></li>
+                            <li><a href="https://messaggeroveneto.gelocal.it/" title="Messaggero Veneto">Messaggero Veneto</a></li>
+                        </ul>
+                    </section>
+                    <section class="footer_menu">
+                        <ul>
+                            <li><h2>Periodici</h2></li>
+                            <li><a href="https://www.lescienze.it/" title="Le Scienze">Le Scienze</a></li>
+                            <li><a href="https://www.limesonline.com/" title="Limes">Limes</a></li>
+                            <li><a href="https://micromega.repubblica.it/" title="Micromega">Micromega</a></li>
+                            <li><a href="https://www.nationalgeographic.it/" title="National Geographic">National Geographic</a></li>
+                            <li><a href="https://www.repubblica.it/rclub/" title="RClub">RClub</a></li>
+                        </ul>
+                    </section>
+                    <section class="footer_menu">
+                    <ul>
+                            <li><h2>Radio</h2></li>
+                            <li><a href="https://www.deejay.it/" title="DeeJay">DeeJay</a></li>
+                            <li><a href="https://www.capital.it/" title="Capital">Capital</a></li>
+                            <li><a href="https://www.m2o.it/" title="m2o">m2o</a></li>
+                        </ul>
+                    </section>
+                    <section class="footer_menu"> 
+                        <ul>
+                            <li><h2>Iniziative Editoriali</h2></li>
+                            <li><a href="http://inedicola.gruppoespresso.it/" title="Tutte le iniziative">Tutte le iniziative</a></li>
+                            <li><a href="http://www.servizioclienti.repubblica.it/" title="Servizio Clienti">Servizio Clienti</a></li>
+                            <li><a href="http://www.servizioclienti.repubblica.it/index.php?page=ricerca&amp;idcategoria=104" title="Servizio Arretrati">Servizio Arretrati</a></li>
+                            <li><a href="http://guidesapori.servizioclienti.repubblica.it/" title="Guide di Repubblica">Guide di Repubblica</a></li>
+                        </ul>
+                    </section>
+                    <section class="footer_menu">
+                        
+                        <ul class="footer_menu hide_by_default">
+                            <li><h2>Servizi, tv e consumi</h2></li>
+                            <li><a href="https://annunci.repubblica.it/italia/" title="Annunci">Annunci</a></li>
+                            <li><a href="https://www.mymovies.it/" title="Mymovies">Mymovies</a></li>
+                            <li><a href="https://ilmiolibro.kataweb.it/" title="Ilmiolibro">Ilmiolibro</a></li>
+                            <li><a href="https://necrologie.repubblica.it/" title="Necrologie">Necrologie</a></li>
+                            <li><a href="https://tvzap.kataweb.it/categoria/guida-tv/" title="GuidaTV">GuidaTV</a></li>
+                            <li><a href="https://www.repubblica.it/economia/miojob/" title="Miojob">Miojob</a></li>
+                            <li><a href="https://www.entietribunali.kataweb.it/" title="Enti e Tribunali">Enti e Tribunali</a></li>
+                            <li><a href="https://meteo.repubblica.it/" title="Meteo">Meteo</a></li>
+                            <li><a href="https://shop.moda.it/" title="Shop">Shop</a></li>
+                            <li><a href="https://www.repubblica.it/speciali/traffico/2015/07/16/news/traffico_in_tempo_reale-119220376/" title="Traffico in diretta">Traffico in diretta</a></li>
+                            <li><a href="https://tvzap.kataweb.it/categoria/guida-tv/" title="tvzap">tvzap</a></li>
+                            <li><a href="https://dizionari.repubblica.it/italiano.php" title="Dizionario italiano">Dizionario italiano</a></li>
+                            <li><a href="https://dizionari.repubblica.it/inglese.php" title="Dizionario inglese/italiano">Dizionario inglese/italiano</a></li>
+                            <li><a href="https://www.consigli.it/" title="Consigli.it">Consigli.it</a></li>
+                            <li><a href="https://la.repubblica.it/cucina/" title="Ricette">Ricette</a></li>
+                        </ul>
+                    </section>
+                    <section class="footer_menu">                     
+                        <ul class="footer_menu hide_by_default">
+                            <li><h2>Partnership</h2></li>
+                            <li><a href="https://www.huffingtonpost.it/" title="Huffington Post">Huffington Post</a></li>
+                            <li><a href="https://www.nationalgeographic.it/" title="National Geographic">National Geographic</a></li>
+                            <li><a href="https://www.lescienze.it/" title="Le Scienze">Le Scienze</a></li>
+                            <li><a href="https://it.businessinsider.com/" title="Business Insider">Business Insider</a></li>
+                            <li><a href="https://it.mashable.com/" title="Mashable Italia">Mashable Italia</a></li>
+                        </ul>
+                    </section>
+                    <section class="footer_menu">                   
+                        <ul class="footer_menu hide_by_default">
+                            <li><h2>RSS</h2></li>
+                            <li><a href="https://www.repubblica.it/rss/homepage/rss2.0.xml">Homepage</a></li>
+                            <li><a href="https://www.repubblica.it/rss/cronaca/rss2.0.xml">Cronaca</a></li>
+                            <li><a href="https://www.repubblica.it/rss/politica/rss2.0.xml">Politica</a></li>
+                            <li><a href="https://www.repubblica.it/rss/tecnologia/rss2.0.xml">Tecnologia</a></li>
+                            <li><a href="https://www.repubblica.it/rss/ambiente/rss2.0.xml">Ambiente</a></li>
+                            <li><a href="https://www.repubblica.it/rss/esteri/rss2.0.xml">Esteri</a></li>
+                            <li><a href="https://www.repubblica.it/rss/sport/calcio/rss2.0.xml">Calcio</a></li>
+                            <li><a href="https://www.repubblica.it/rss/sport/rss2.0.xml">Sport</a></li>
+                            <li><a href="https://www.repubblica.it/rss/motori/rss2.0.xml">Motori</a></li>
+                            <li><a href="https://www.repubblica.it/rss/scienze/rss2.0.xml">Scienze</a></li>
+                            <li><a href="https://www.repubblica.it/rss/gallerie/rss2.0.xml">Gallerie</a></li>
+                            <li><a href="https://www.repubblica.it/rss/spettacoli/rss2.0.xml">Spettacoli</a></li>
+                            <li><a href="https://www.repubblica.it/rss/scuola_e_universita/rss2.0.xml">Scuola e Giovani</a></li>
+                            <li><a href="https://www.repubblica.it/rss/solidarieta/rss2.0.xml">Mondo Solidale</a></li>
+                            <li><a href="https://www.repubblica.it/rss/economia/rss2.0.xml">Economia&amp;Finanza</a></li>
+                        </ul>
+                    </section>
+                    </div>
+                    </div>
+                </div>
+    
+
+        <!--
+        <div class="rep-page-footer__middle hide_by_default">
+            <div class="rep-page-footer-content">
+                <ul>
+                    <li class="hide-on-mobile"><a href="https://www.repubblica.it/static/servizi/set-home/sthome.html?ref=hpfoot" id="sethomepage" title="Fai di Repubblica la tua homepage">Fai di Repubblica la tua homepage</a></li>
+                    <li class="hide-on-mobile"><a href="https://www.repubblica.it/static/servizi/mappasito.html?ref=hpfoot" title="Mappa del sito">Mappa del sito</a></li>
+                    <li class="hide-on-mobile"><a href="https://www.repubblica.it/static/servizi/gerenza.html?ref=hpfoot" title="Redazione">Redazione</a></li>
+                    <li class="hide-on-mobile"><a href="https://www.repubblica.it/static/servizi/scrivi.html?ref=hpfoot" title="Scriveteci">Scriveteci</a></li>
+                    <li><a href="mailto:visualdesk@kataweb.it" title="Per inviare foto e video">Per inviare foto e video</a></li>
+                    <li><a href="http://www.servizioclienti.repubblica.it/?ref=hpfoot" title="Servizio Clienti">Servizio Clienti</a></li>
+                    <li><a href="https://www.manzoniadvertising.com?ref=hpfoot" title="Pubblicità">Pubblicità</a></li>
+                    <li><a id="kw-cookie-link" class="iubenda-advertising-preferences-link" style="cursor: pointer;">Gestione Cookie</a></li>
+                    <li><a href="https://www.repubblica.it/corporate/privacy/privacy.html" id="kw-privacy-link" style="cursor: pointer;">Privacy</a></li><li><a id="kw-cookie-policy-link" href="https://www.repubblica.it/corporate/privacy/cookie-policy.html">Cookie Policy</a></li>
+                    <li><a href="https://www.repubblica.it/static/trust/ethics" id="ethics" title="Codice Etico e Best Practices">Codice Etico e Best Practices</a></li>
+                </ul>
+            </div>
+        </div>-->
+        <div>
+            <div class="text-center bottom_footer">
+                <a href="https://www.gedispa.it/">GEDI News Network S.p.A.</a> - P.Iva 01551009 - ISSN 2499-081
+            </div>
+        </div>
+    <!--</div>-->
+    </div>
+    </footer>
+</body>
+</html>
