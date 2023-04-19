@@ -103,7 +103,7 @@
             </div>
             <div class="row d_flex flex-row justify-content-between">
                 <div class="col-4 col-xs-4 col-sm-4 align-items-center">
-                    <button class="align-items-center">
+                    <button class="align-items-center" id="open_nav_alternative">
                         <img src="img/menu_icon.png" class="buttonElement icon">
                     </button>
                 </div>
@@ -498,15 +498,15 @@
         <div class="row">
             <div class="col-sm-8 col-xs-12 d-flex flex-column articoli">
                 <div id="colonna_interno_left">
-                        <div class="priority_div_1 article_content align-items-center col-sm-12 col-xs-12 p-0">
-                            <div class="container d_flex m-0 p-1">
+                    <div class="priority_div_1 article_content col-sm-12 col-xs-12">
+                            <div class="container">
                                 <div class="row">
-                                    <div class="col-sm-12 col-xs-12 d_flex">
+                                    <div class="col-sm-12 col-xs-12">
                                     <div id="blink"><!--live red dot--></div>
                                     <h1 id='milano'>Milano</h1>
                                     </div>
                                 </div>
-                                <div class="row justify-content-center">
+                                <div class="row">
                                     <div class="col-sm-6 col-xs-12">                        <!--bottone live-->
                                     <figure>
                                     <img src="img/politico.jpg" alt="La Camera">
@@ -529,11 +529,11 @@
                                     <h2 class="">
                                     <a href="..." class="p1_a">Malore improvviso per il deputato Rossi durante un dibattito parlamentare. In attesa di aggiornamenti dall'ospedale </a>
                                     </h2>
-                                <span class="author">di Alessio Neri</span>
-                            </article>
+                                    <span class="author">di Alessio Neri</span>
+                                </article>
+                                </div>
+
                             </div>
-                        
-                        </div>
                     </div>
                 
                         <div class="priority_div_1 article_content col-sm-12 col-xs-12">
@@ -653,8 +653,6 @@
                             </div>  
                     
                             </div></div>
-                    
-
                     <!--div affiancati-->       
                     <div class="col-sm-12 col-xs-12 text-center article_content">
                         <h1>Economia</h1>
@@ -774,6 +772,73 @@
 
                         </div>
                     </div>
+                    <!------->
+                    <!--div affiancati-->
+                    <div class="col-sm-12 col-xs-12 text-center justify-content-center">
+                        <div class="container">
+                            <div class="row"><h1>Governo</h1></div>
+
+                            <div class="row">
+                                <div class="priority_div_1 article_content col-sm-6 col-xs-12">
+                                    <article>
+                                        <figure>
+                                            <img src="img/governo1.jpg" alt="il ministro Rossi">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <h1 class="p_header"></h1>
+                                        <h2 class="p_header">
+                                            <a href="..." class="p2_a">Approvata la nuova legge di bilancio, ma non entrerà in vigore fino al..</a>
+                                        </h2>
+                                        <span class="author">di Emilio Verdi</span>
+                                    </article>
+                                </div>
+                                <div class="priority_div_1 article_content col-sm-6 col-xs-6">
+                                    <h1 class="p_header"></h1>
+                                    <article>
+                                        <figure>
+                                            <img src="img/governo2.jpg" alt="il ministro Rossi">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <h1></h1>
+                                        <h2>
+                                            <a href="..." class="p2_a">Tensione alla camera per la nomina dei nuovi membri del..</a>
+                                        </h2>
+                                        <span class="author">di Palo Gialli</span>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="priority_div_1 article_content col-sm-6 col-xs-12">
+                                    <article>
+                                        <figure>
+                                            <img src="img/governo1.jpg" alt="il ministro Rossi">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <h1 class="p_header"></h1>
+                                        <h2 class="p_header">
+                                            <a href="..." class="p2_a">Approvata la nuova legge di bilancio, ma non entrerà in vigore fino al..</a>
+                                        </h2>
+                                        <span class="author">di Emilio Verdi</span>
+                                    </article>
+                                </div>
+                                <div class="priority_div_1 article_content col-sm-6 col-xs-6">
+                                    <h1 class="p_header"></h1>
+                                    <article>
+                                        <figure>
+                                            <img src="img/governo2.jpg" alt="il ministro Rossi">
+                                            <figcaption></figcaption>
+                                        </figure>
+                                        <h1></h1>
+                                        <h2>
+                                            <a href="..." class="p2_a">Tensione alla camera per la nomina dei nuovi membri del..</a>
+                                        </h2>
+                                        <span class="author">di Palo Gialli</span>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
 
                 </div>
@@ -781,8 +846,7 @@
                         </div>
 
             <!--video e pubblicità-->
-            <div class="col-sm-4 col-xs-12 d-flex flex-column pt-2 pubblicità article_content">
-                <!--pubblicità-->
+            <div class="col-sm-4 col-xs-12 d-flex flex-column pubblicità">
             <div class="row">
                 <div class="col-sm-12 col-xs-12 text-center" id="colonna_interno_right">
                     <div id="ad_0" class="ad">
@@ -794,7 +858,6 @@
                             </figure>
                         </article>
                     </div>
-                <!--video-->
                     <div id="video" class="ad">
                     <h1 class="p_header">Video</h1>
                     <article>

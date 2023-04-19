@@ -71,6 +71,10 @@ window.onload = function() {
             var navBar = document.getElementById("nav_bar");
             navBar.classList.toggle("hide_by_default");
     });
+    document.getElementById("open_nav_alternative").addEventListener("click", function() {
+        var navBar = document.getElementById("nav_bar");
+        navBar.classList.toggle("hide_by_default");
+    });
     //apertura menu header
    
     document.getElementById("menu_espandibile").addEventListener("click", function() {
