@@ -124,9 +124,9 @@ window.onload = function() {
     setTimeout(function() {
         document.querySelector("#ad_5").classList.toggle("hide_by_default");
     }, 8000);
-    setTimeout(function() {
-        document.querySelector("#ad_7").classList.toggle("hide_by_default");
-    }, 10000);
+    //setTimeout(function() {
+     //   document.querySelector("#ad_7").classList.toggle("hide_by_default");
+    //}, 10000);
     alert("file javascript caricato, le animazioni sono ora funzionanti");
 }
 
