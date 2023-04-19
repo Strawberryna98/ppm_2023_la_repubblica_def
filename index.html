@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8"><!-- TODO -->
     <!--TODO DA DISATTIVARE-->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" type="text/css">
+    <!--<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" type="text/css">-->
 
     <link rel="stylesheet" href="style.css" type="text/css">
 
     <!--TODO DA ATTIVARE-->
-    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    -->
     <!--<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.rtl.css" type="text/css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css" type="text/css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.rtl.css" type="text/css">
@@ -339,13 +338,16 @@
         <div id="div_esterno" class="justify-content-center p-0 m-0">
             <!--data e meteo-->
         <div class="row">
+            <!--<div class="lds-dual-ring"></div>-->
             <div class="d-flex col-sm-12 justify-content-center align-items-center p-0 m-0" id="rep_default">
             <span id="repubblica" class="p-0">Republic</span>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-6 col-xs-12 d-flex flex-row align-items-center justify-content-end p-0 m-0" id="temperature_and_date">
-                <div id="data" class="justify-content-end text-right"><!--qui  compare la data e ora di oggi--></div>
+                <div id="data" class="justify-content-end text-right"><!--qui  compare la data e ora di oggi-->
+                    </div>
+
             </div>
             <div class="col-sm-6 align-items-center p-0">
                 <div id="meteo" class="hide_on_mobile">
@@ -495,30 +497,30 @@
             <img src="img/keyboard_ad.jpg">
         </div>-->
         <div class="row">
-            <div class="col-sm-9 col-xs-12 d-flex flex-column articoli">
+            <div class="col-sm-8 col-xs-12 d-flex flex-column articoli">
                 <div id="colonna_interno_left">
-                        <div class="priority_div_1 article_content align-items-center col-sm-12 col-xs-12">
-                            <div class="container d_flex">
+                        <div class="priority_div_1 article_content align-items-center col-sm-12 col-xs-12 p-0">
+                            <div class="container d_flex m-0 p-1">
                                 <div class="row">
                                     <div class="col-sm-12 col-xs-12 d_flex">
                                     <div id="blink"><!--live red dot--></div>
                                     <h1 id='milano'>Milano</h1>
+                                    </div>
                                 </div>
-                                </div>
-                                <div class="row">
-                                <div class="col-sm-6 col-xs-12">                        <!--bottone live-->
-                                <figure>
-                                <img src="img/politico.jpg" alt="La Camera">
-                                <figcaption>il deputato Mario Rossi</figcaption>
-                                </figure>
-                                </div>
-                                <div class="col-sm-6 col-xs-12 text-center">
-                                <!--bottone live-->
-                                <figure>
-                                    <img src="img/ambulanza.jpg" alt="La Camera">
-                                    <figcaption></figcaption>
-                                </figure>
-                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-sm-6 col-xs-12">                        <!--bottone live-->
+                                    <figure>
+                                    <img src="img/politico.jpg" alt="La Camera">
+                                    <figcaption>il deputato Mario Rossi</figcaption>
+                                    </figure>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-12 text-center">
+                                    <!--bottone live-->
+                                    <figure>
+                                        <img src="img/ambulanza.jpg" alt="La Camera">
+                                        <figcaption></figcaption>
+                                    </figure>
+                                    </div>
                                 </div>
                                 <div class="row">
                                 <div class="col-sm-12 col-xs-12 text-center">
@@ -535,7 +537,7 @@
                         </div>
                     </div>
                 
-                        <div class="priority_div_1 article_content col-sm-12 col-xs-12"> 
+                        <div class="priority_div_1 article_content col-sm-12 col-xs-12">
                             <div class="col-sm-12 col-xs-12 text-center"><h1>I temi della politica</h1>
                             <article>La politica
                                 <figure>
@@ -543,15 +545,15 @@
                                     <figcaption>La Camera dei deputati</figcaption>
                                 </figure>
                                 <h1 class="">Politica</h1>
-                                <h2 class="">La destra di governo
-                                    <a href="..." class="p1_a">annuncia una nuova proposta per la legge elettorale, che scatena un dibattito secolare</a>
+                                <h2 class="">
+                                    <a href="..." class="p1_a">La destra di governo annuncia una nuova proposta per la legge elettorale, che scatena un dibattito secolare</a>
                                 </h2>
                                 <span class="author">di Sara Bianchi</span>
                             </article>
                             </div>
                         </div>
                     <!--div affiancati-->
-                    <div class="priority_div_1 article_content col-sm-8 col-xs-12"> 
+                    <div class="priority_div_1 article_content col-sm-8 col-xs-12">
                         <h1>Nuove tecnologie</h1>
                         <article>
                             <figure>
@@ -653,10 +655,10 @@
                     
                             </div></div>
                     
-                            </div>
+
                     <!--div affiancati-->       
                     <div class="col-sm-12 col-xs-12 text-center article_content">
-                        <h1>Calcio</h1>
+                        <h1>Economia</h1>
                     <div class="container">
                     <div class="row">
                         <div class="priority_div_1 article_content col-sm-9 col-xs-12">
@@ -747,15 +749,40 @@
                         </article>
                         
                     </div>
-        
-        
+                        <div class="priority_div_2 article_content col-sm-12 col-xs-12">
+                            <div class="row text-center"><h1>Musica</h1></div>
+                            <div class="container">
+                                <div class="row">
+                            <div class="col-xs-12 col-sm-6">
+                                <figure>
+                                    <img src="img/singer2.jpg" alt="">
+                                    <figcaption></figcaption>
+                                </figure>
+                            </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <article>
+                                            <h1></h1>
+                                            <h2>
+                                                <a href="..." class="p3_a">Record di telespettatori per la prima serata del concerto a Verona.  Ma lo spettacolo non è stato esente da imprevisti. Alcuni spettatori hanno avuto problemi ad entrare, causando code interminabili. Inoltre, il tempo incerto ha portato ad alcuni ritardi nell'apertura...</a>
+                                                </a>
+                                            </h2>
+                                            <span class="author">di Sara Bianchi</span>
+                                        </article>
+                                    </div>
 
+                                </div>
+                            </div>
 
                         </div>
+                    </div>
+
+
                 </div>
-        
+
+                        </div>
+
             <!--video e pubblicità-->
-            <div class="col-sm-3 col-xs-12 d-flex flex-column px-10 p pubblicità">
+            <div class="col-sm-4 col-xs-12 d-flex flex-column pt-2 pubblicità article_content">
                 <!--pubblicità-->
             <div class="row">
                 <div class="col-sm-12 col-xs-12 text-center" id="colonna_interno_right">
@@ -868,7 +895,7 @@
                         <div><a href="...">Un commento sulle unioni civili</a></div>
                     </section>
                     <!--blocco di ads-->
-                    <div id="ad_7" class="hide_by_default">
+                    <div id="ad_7">
                         <div class="ad">
                             <h1 class="p_header"></h1>
                             <article>Apre a Milano il negozio..
@@ -923,7 +950,7 @@
             </div>
         <!--fine sezione articoli-->
         <!--sezione orizzontale video-->
-        <div class="row">
+             <div class="row">
             <div class="d-flex col-sm-12 col-xs-12 justify-content-center">
                 <span>Video</span>
             </div>

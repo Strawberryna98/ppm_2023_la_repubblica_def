@@ -8,11 +8,19 @@ img{
     height: auto;
     float: left;
 }
+figcaption{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: gray;
+    font-style: italic;
+}
 div{
     width:100%;
     display: block;
 }
-
+col-sm-6, col-sm-4, col-sm-8{
+    margin:0px;
+}
 .logo_div{
     width: 50%;
 }
@@ -152,7 +160,32 @@ input{
 #data{
     text-align: end;
 }
-#meteo >*{
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+/*animazione*/
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+#meteo>*{
     padding: 0px;
     margin:0px;
 }
@@ -165,6 +198,9 @@ input{
     text-align: center;
     padding:0px;
     margin:0px;
+}
+#rep_default span div{
+    display:block;
 }
 @media (max-width: 768px) {
     #repubblica{
@@ -196,11 +232,11 @@ input{
     width: 100%;
 }
 #blink{
-    width: 7px;
-    height: 7px;
+    width: 6px;
+    height: 6px;
     background-color: red;
     border-radius: 100px;
-    margin: 2px;
+    margin: 5px;
     padding: 5px;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -249,13 +285,12 @@ iframe{
     border: 10px solid orangered;
 }*/
 .article_content{
-    border-top: 1px solid #ebebeb;
+    border-top: 1px solid lightslategray;
     border-bottom: 1px solid lightgray;
-    padding:5px;
+    padding:8px;
+    margin-bottom:6px;
     float: left;
     height:auto;
-    padding-top:12px;
-    padding-bottom:10px;
 
 }
 .article_content h1{
@@ -309,20 +344,23 @@ li a.menu_title{
 }
 
 .author{
-    font-family: serif;
-    color: black;
+    font-family: Georgia;
+    color: #4b88ca;
     font-style: italic;
+    font-size:14px;
 }
 #colonna_interno_left{
     background-color: white;
-    padding:0px;
+    padding:8px;
 }
 #colonna_interno_right{
     border-top: 1px solid #ebebeb;
+    margin-top:3px;
     background-color: #c9c8c8;
+    height:100%;
+    padding-top:5px;
 }
 .pubblicità, .articoli{
-    border-top: 1px solid #c5c5c5;
     padding-top: 5px;
 }
 
