@@ -354,7 +354,7 @@ li a.menu_title{
     padding:8px;
 }
 #colonna_interno_right{
-    border-top: 1px solid #ebebeb;
+   /* border-top: 1px solid #ebebeb;*/
     margin-top:3px;
     background-color: #c9c8c8;
     height:100%;
