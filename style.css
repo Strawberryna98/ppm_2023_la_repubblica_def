@@ -26,9 +26,11 @@ div{
     padding-top:30px;
     margin:0px;
     overflow: hidden;
+    justify-content: center;
 }
 #container_interno2{
     border: #c5c5c5 1px solid;
+    padding:0px;
 }
 #container_interno, #container_interno2, #container_footer{
     max-width: 980px;
@@ -112,7 +114,7 @@ button{
     display: inline-flex;
     height:auto;
     color: black;
-    font-size: 18px;
+    font-size: 14px;
     border: none;
     background-color: inherit;
     cursor: pointer;
@@ -161,6 +163,8 @@ input{
     letter-spacing: 2px;
     width: 100%;
     text-align: center;
+    padding:0px;
+    margin:0px;
 }
 @media (max-width: 768px) {
     #repubblica{
@@ -247,7 +251,7 @@ iframe{
 .article_content{
     border-top: 1px solid #ebebeb;
     border-bottom: 1px solid lightgray;
-    padding:10px;
+    padding:5px;
     float: left;
     height:auto;
     padding-top:12px;
@@ -311,6 +315,7 @@ li a.menu_title{
 }
 #colonna_interno_left{
     background-color: white;
+    padding:0px;
 }
 #colonna_interno_right{
     border-top: 1px solid #ebebeb;
