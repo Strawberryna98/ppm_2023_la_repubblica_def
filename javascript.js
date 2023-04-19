@@ -105,6 +105,8 @@ window.onload = function() {
     });
     setTimeout(function() {
         document.querySelector("#ad_0").classList.toggle("hide_by_default");
+        document.querySelector("#ad_2").classList.toggle("hide_by_default");
+
     }, 600);
     setTimeout(function() {
         document.querySelector("#ad_4").classList.toggle("hide_by_default");
@@ -113,7 +115,6 @@ window.onload = function() {
         document.querySelector("#ad_3").classList.toggle("hide_by_default");
     }, 3000);
     setTimeout(function() {
-        document.querySelector("#ad_2").classList.toggle("hide_by_default");
     }, 4000);
     setTimeout(function() {
         document.querySelector("#ad_1").classList.toggle("hide_by_default");
